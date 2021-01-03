@@ -1,8 +1,6 @@
 package com.devch.mycontact.repository;
 
-import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 import com.devch.mycontact.domain.entity.Person;
 import java.time.LocalDate;

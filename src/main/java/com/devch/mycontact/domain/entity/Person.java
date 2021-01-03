@@ -2,15 +2,18 @@ package com.devch.mycontact.domain.entity;
 
 
 import java.time.LocalDate;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
+
 
 @RequiredArgsConstructor
 @AllArgsConstructor
@@ -43,5 +46,9 @@ public class Person {
   private String phoneNumber;
 
   private boolean deleted;
+
+  @OneToOne(cascade = CascadeType.PERSIST)
+  @ToString.Exclude
+  private Block block;
 
 }
